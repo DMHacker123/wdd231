@@ -1,0 +1,37 @@
+/* Container (#cards) - center horizontally and restrict max width */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* smaller cards */
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 900px;        /* limit max width of the grid */
+    margin: 0 auto;          /* center the entire grid on the page */
+  }
+  
+  /* Individual cards */
+  #cards section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    /* Center content inside card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
+    /* Smaller fixed width */
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  
+  /* Image styling - smaller size and centered */
+  #cards section img {
+    width: 180px;  /* smaller width */
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  

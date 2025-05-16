@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="A sample web page structured with valid HTML5 and meta information for best practices in accessibility, SEO, and responsiveness." />
+  <meta name="author" content="Darwin Matos" />
+  <meta name="keywords" content="HTML5, web development, SEO, accessibility, responsive design" />
+  <title>Sample Structured Page</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style/prophets.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph Meta (for social sharing) -->
+  <meta property="og:title" content="Sample Structured Page" />
+  <meta property="og:description" content="A well-structured HTML5 page example with proper meta information." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/sample-page" />
+  <meta property="og:image" content="https://example.com/images/preview.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sample Structured Page" />
+  <meta name="twitter:description" content="A well-structured HTML5 page with SEO and accessibility in mind." />
+  <meta name="twitter:image" content="https://example.com/images/preview.jpg" />
+
+  <!-- JavaScript -->
+  <script src="scripts/prophets.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Latter-day Prophets</h1>
+  </header>
+
+  <main>
+    <div id="cards"></div>
+  </main>
+
+  <footer>
+    Darwin Matos | Latter-day Prophets <br>
+    &copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span>
+  </footer>
+
+  <script>
+    // Dynamically insert current year and last modified date
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
