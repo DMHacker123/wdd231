@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Sahara Goods",
+      "address": "101 Market Road, Timbuktu, Mali",
+      "phone": "(223) 555-1234",
+      "website": "https://saharagoods.ml",
+      "image": "sahara.png",
+      "membership": 3
+    },
+    {
+      "name": "Desert Tech Solutions",
+      "address": "45 Innovation Blvd, Timbuktu, Mali",
+      "phone": "(223) 555-5678",
+      "website": "https://deserttech.ml",
+      "image": "deserttech.png",
+      "membership": 2
+    },
+    {
+      "name": "Camel Courier",
+      "address": "12 Caravan Way, Timbuktu, Mali",
+      "phone": "(223) 555-8765",
+      "website": "https://camelcourier.ml",
+      "image": "camelcourier.png",
+      "membership": 1
+    }
+  ]
+  

@@ -1,47 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to the [Your City] Chamber of Commerce – connecting businesses, supporting growth, and building a thriving community.">
-  <meta name="author" content="Darwin Matos">
-  <title>[Your City] Chamber of Commerce</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Timbuktu Chamber of Commerce supports local businesses, promotes events, and shares community updates." />
+  <meta name="author" content="Marie Martínez" />
+  <title>Timbuktu Chamber of Commerce</title>
 
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-  <!-- Facebook Open Graph Meta Tags -->
-  <meta property="og:title" content="[Your City] Chamber of Commerce">
-  <meta property="og:description" content="Discover local businesses, community events, and resources with the [Your City] Chamber of Commerce.">
-  <meta property="og:image" content="https://yourdomain.com/images/social-share.jpg">
-  <meta property="og:url" content="https://yourdomain.com/">
-  <meta property="og:type" content="website">
+  <!-- Open Graph Meta for Facebook -->
+  <meta property="og:title" content="Timbuktu Chamber of Commerce" />
+  <meta property="og:description" content="Connecting businesses and community in Timbuktu." />
+  <meta property="og:image" content="https://yourdomain.com/images/social-share.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:type" content="website" />
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/directory.css" />
+  <script src="script/directory.js" defer></script>
 </head>
-<body>
 
+<body>
   <header>
-    <h1>Welcome to the [Your City] Chamber of Commerce</h1>
-    <!-- Add nav here -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Timbuktu Chamber of Commerce Logo" />
+      <span>Chamber of Commerce</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Directory</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Discover</a></li>
+        <li><button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </nav>
   </header>
 
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Timbuktu community with a sunset in the background" />
+    <button class="cta-button">Keynote Tickets</button>
+  </section>
+
   <main>
-    <!-- Main content goes here -->
+    <h1>Home</h1>
+
+    <section class="info-panels">
+      <div class="panel events">
+        <h2>Events</h2>
+        <p>Upcoming local events will be displayed here.</p>
+      </div>
+      <div class="panel weather">
+        <h2>Current Weather</h2>
+        <p><strong>75°F</strong><br/>Partly Cloudy<br/>High: 85°<br/>Low: 52°<br/>Humidity: 34%<br/>Sunrise: 7:30am<br/>Sunset: 9:59pm</p>
+      </div>
+      <div class="panel forecast">
+        <h2>Weather Forecast</h2>
+        <ul>
+          <li>Today: <strong>90°F</strong></li>
+          <li>Wednesday: <strong>89°F</strong></li>
+          <li>Thursday: <strong>68°F</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="spotlights">
+      <article class="business-card">
+        <img src="images/business1.jpg" alt="Logo of Sunrise Café" />
+        <h3>Sunrise Café</h3>
+        <p>Fresh local ingredients every morning</p>
+        <p><strong>Email:</strong> info@sunrisecafe.com<br/>
+        <strong>Phone:</strong> (800) 123-4567<br/>
+        <strong>URL:</strong> <a href="https://sunrisecafe.com">sunrisecafe.com</a></p>
+      </article>
+
+      <article class="business-card">
+        <img src="images/business2.jpg" alt="Logo of Desert Tech Solutions" />
+        <h3>Desert Tech Solutions</h3>
+        <p>Empowering businesses through tech</p>
+        <p><strong>Email:</strong> contact@deserttech.com<br/>
+        <strong>Phone:</strong> (800) 234-5678<br/>
+        <strong>URL:</strong> <a href="https://deserttech.com">deserttech.com</a></p>
+      </article>
+
+      <article class="business-card">
+        <img src="images/business3.jpg" alt="Logo of Mali Makers Market" />
+        <h3>Mali Makers Market</h3>
+        <p>Handcrafted goods from local artisans</p>
+        <p><strong>Email:</strong> hello@malimakers.com<br/>
+        <strong>Phone:</strong> (800) 345-6789<br/>
+        <strong>URL:</strong> <a href="https://malimakers.com">malimakers.com</a></p>
+      </article>
+    </section>
+
+    <section class="directory-section">
+      <h2>Our Chamber Members</h2>
+
+      <!-- View Toggle Buttons -->
+      <div id="view-toggle">
+        <button id="gridView" aria-label="Grid View">🔳 Grid View</button>
+        <button id="listView" aria-label="List View">📃 List View</button>
+      </div>
+
+      <!-- Members Container -->
+      <div id="members" class="grid-view">
+        <div class="member-card">
+          <img src="images/member1.jpg" alt="Logo of Timbuktu Books" />
+          <h3>Timbuktu Books</h3>
+          <p>Independent bookstore and café</p>
+          <p>Email: <a href="mailto:info@timbuktubooks.com">info@timbuktubooks.com</a></p>
+          <p>Phone: (223) 555-0001</p>
+          <p>Website: <a href="https://timbuktubooks.com">timbuktubooks.com</a></p>
+        </div>
+        <!-- More member cards can be added here -->
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> [Your City] Chamber of Commerce</p>
+    <div class="contact">
+      <p><strong>Timbuktu Chamber of Commerce</strong><br />
+        10 Rue De La Paix<br />
+        Timbuktu, Mali 999<br />
+        <a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a><br />
+        (223) 555-2300
+      </p>
+    </div>
+
+    <div class="social">
+      <a href="#"><img src="images/youtube-icon.png" alt="YouTube" /></a>
+      <a href="#"><img src="images/twitter-icon.png" alt="Twitter" /></a>
+      <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+    </div>
+
+    <div class="project-info">
+      <p>
+        WDD 231 Class Project<br />
+        Darwin Matos<br />
+        &copy; <span id="year"></span> Timbuktu Chamber of Commerce<br />
+        Last Modification: <span id="lastModified"></span>
+      </p>
+    </div>
   </footer>
 
-  <!-- JavaScript -->
   <script>
-    // Update copyright year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
   </script>
 </body>
 </html>
