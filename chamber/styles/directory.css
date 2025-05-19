@@ -266,4 +266,49 @@ footer a img {
   #view-toggle {
     justify-content: center;
   }
+
+  /* Base Styles */
+#menuToggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hide menu by default on mobile */
+#navMenu.hidden {
+  display: none;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  #menuToggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    right: 1rem;
+    top: 4rem;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    z-index: 1000;
+  }
+  /* Hides images in list view */
+  #members.list-view .member-logo {
+    display: none !important;
+  }
+  
+
+}
+
 }

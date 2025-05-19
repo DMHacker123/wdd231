@@ -1,27 +1,58 @@
 [
-    {
-      "name": "Sahara Goods",
-      "address": "101 Market Road, Timbuktu, Mali",
-      "phone": "(223) 555-1234",
-      "website": "https://saharagoods.ml",
-      "image": "sahara.png",
-      "membership": 3
-    },
-    {
-      "name": "Desert Tech Solutions",
-      "address": "45 Innovation Blvd, Timbuktu, Mali",
-      "phone": "(223) 555-5678",
-      "website": "https://deserttech.ml",
-      "image": "deserttech.png",
-      "membership": 2
-    },
-    {
-      "name": "Camel Courier",
-      "address": "12 Caravan Way, Timbuktu, Mali",
-      "phone": "(223) 555-8765",
-      "website": "https://camelcourier.ml",
-      "image": "camelcourier.png",
-      "membership": 1
-    }
-  ]
-  
+  {
+    "name": "Sahara Goods",
+    "address": "101 Market Road, Timbuktu, Mali",
+    "phone": "(223) 555-1234",
+    "website": "https://saharagoods.ml",
+    "image": "sahara.png",
+    "membership": 3
+  },
+  {
+    "name": "Desert Tech Solutions",
+    "address": "45 Innovation Blvd, Timbuktu, Mali",
+    "phone": "(223) 555-5678",
+    "website": "https://deserttech.ml",
+    "image": "deserttech.png",
+    "membership": 2
+  },
+  {
+    "name": "Camel Courier",
+    "address": "12 Caravan Way, Timbuktu, Mali",
+    "phone": "(223) 555-8765",
+    "website": "https://camelcourier.ml",
+    "image": "camelcourier.png",
+    "membership": 1
+  },
+  {
+    "name": "Oasis Traders",
+    "address": "78 Palmeraie Avenue, Timbuktu, Mali",
+    "phone": "(223) 555-3456",
+    "website": "https://oasistraders.ml",
+    "image": "oasistraders.png",
+    "membership": 2
+  },
+  {
+    "name": "Nomad Textiles",
+    "address": "33 Weavers Lane, Timbuktu, Mali",
+    "phone": "(223) 555-9012",
+    "website": "https://nomadtextiles.ml",
+    "image": "nomadtextiles.png",
+    "membership": 1
+  },
+  {
+    "name": "Timbuktu Solar Co.",
+    "address": "150 Sun Street, Timbuktu, Mali",
+    "phone": "(223) 555-4321",
+    "website": "https://timbuktusolar.ml",
+    "image": "timbuktusolar.png",
+    "membership": 3
+  },
+  {
+    "name": "Sahara Spices",
+    "address": "88 Spice Market, Timbuktu, Mali",
+    "phone": "(223) 555-6789",
+    "website": "https://saharaspices.ml",
+    "image": "saharaspices.png",
+    "membership": 2
+  }
+]
