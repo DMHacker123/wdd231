@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Timbuktu Chamber of Commerce supports local businesses, promotes events, and shares community updates." />
+  <meta name="author" content="Darwin Matos" />
+  <title>Timbuktu Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph Meta for Facebook -->
+  <meta property="og:title" content="Timbuktu Chamber of Commerce" />
+  <meta property="og:description" content="Connecting businesses and community in Timbuktu." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/DMHacker123/wdd231/main/images/istockphoto-171299542-1024x1024.jpg
+  " />
+  <meta property="og:url" content="https://github.com/" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles/directory.css" />
+  <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/camberofcommerce.jpeg" alt="Timbuktu Chamber of Commerce Logo" />
+      <span>Chamber of Commerce</span>
+    </div>
+  
+    <!-- Hamburger Button -->
+    <button id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+  
+    <!-- Navigation Menu -->
+    <nav id="navMenu" class="hidden">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Directory</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Discover</a></li>
+        <li><button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <section class="hero">
+    <picture>
+      <source srcset="images/hero-large.jpg" media="(min-width: 768px)">
+      <img src="images/hero-large.jpg" alt="Community gathering in Timbuktu" />
+    </picture>
+    <div class="hero-content">
+      <h1>Welcome to the Timbuktu Chamber of Commerce</h1>
+      <p>Empowering local businesses and connecting the community.</p>
+      <button class="cta-button">Get Involved</button>
+    </div>
+  </section>
+  
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="info-panels">
+      <div class="panel events">
+        <h2>Events</h2>
+        <article class="event">
+          <h3>Annual Business Expo 2025</h3>
+          <p><strong>Date:</strong> June 15, 2025</p>
+          <p><strong>Time:</strong> 10:00 AM – 4:00 PM</p>
+          <p><strong>Location:</strong> Timbuktu Community Center</p>
+          <p>
+            Join local entrepreneurs and organizations for a day of networking,
+            workshops, and keynote speakers. Open to the public and free to attend.
+          </p>
+        </article>
+      </div>
+      <div class="panel weather">
+        <h2>Current Weather</h2>
+        <p><strong>75°F</strong><br/>Partly Cloudy<br/>High: 85°<br/>Low: 52°<br/>Humidity: 34%<br/>Sunrise: 7:30am<br/>Sunset: 9:59pm</p>
+      </div>
+      <div class="panel forecast">
+        <h2>Weather Forecast</h2>
+        <ul>
+          <li>Today: <strong>90°F</strong></li>
+          <li>Wednesday: <strong>89°F</strong></li>
+          <li>Thursday: <strong>68°F</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="directory-section">
+      <h2>Our Chamber Members</h2>
+
+      <!-- View Toggle Buttons -->
+      <div id="view-toggle">
+        <button id="gridView" aria-label="Grid View">🔳 Grid View</button>
+        <button id="listView" aria-label="List View">📃 List View</button>
+      </div>
+
+      <!-- Members Container -->
+      <div id="members" class="grid-view">
+        <div class="member-card">
+          <img src="images/timbuktubooks.jpeg" alt="Logo of Timbuktu Books" />
+          <h3>Timbuktu Books</h3>
+          <p>Independent bookstore and café</p>
+          <p>Email: <a href="mailto:info@timbooks.com">info@timbooks.com</a></p>
+          <p>Phone: (223) 555-0001</p>
+          <p>Website: <a href="https://timbooks.com">timbooks.com</a></p>
+        </div>
+        <!-- More member cards can be added here -->
+      </div>
+    </section>
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container" class="spotlight-grid">
+        <!-- Spotlight cards will be inserted here -->
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="contact">
+      <p><strong>Timbuktu Chamber of Commerce</strong><br />
+        10 Rue De La Paix<br />
+        Timbuktu, Mali 999<br />
+        <a href="mailto:info@timbuk.org">info@timbuk.org</a><br />
+        (223) 555-2300
+      </p>
+    </div>
+
+    <div class="social">
+      <a href="https://youtube.com/timbuktu"><img src="images/youtube_icon.png" alt="YouTube" /></a>
+      <a href="https://twiter.com/timbuktu"><img src="images/logo_of_twitter.svg.webp" alt="Twitter" /></a>
+      <a href="https://linkedin.com/timbuktu"><img src="images/linkedin_logo.png" alt="LinkedIn" /></a>
+    </div>
+
+    <div class="project-info">
+      <p>
+        WDD 231 Class Project<br />
+        Darwin Matos<br />
+        &copy; <span id="year"></span> Timbuktu Chamber of Commerce<br />
+        Last Modification: <span id="lastModified"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
