@@ -32,22 +32,32 @@
     <button id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
   
     <!-- Navigation Menu -->
-    <nav id="navMenu" class="hidden">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Directory</a></li>
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Discover</a></li>
-        <li><button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button></li>
-      </ul>
-    </nav>
+<nav id="navMenu" class="hidden">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="directory.html">Directory</a></li>  <!-- THIS -->
+    <li><a href="join.html">Join</a></li>
+    <li><a href="discover.html">Discover</a></li>
+    <li><button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button></li>
+  </ul>
+</nav>
+
   </header>
   
 
   <section class="hero">
-    <img src="images/happy-young-people.jpg" alt="Timbuktu community with a sunset in the background" />
-    <button class="cta-button">Keynote Tickets</button>
+    <picture>
+
+      <img src="images/hero-large.jpg" alt="Community gathering in Timbuktu" width="1200" height="600" />
+    </picture>
+    
+    <div class="hero-content">
+      <h1>Welcome to the Timbuktu Chamber of Commerce</h1>
+      <p>Empowering local businesses and connecting the community.</p>
+      <button class="cta-button">Get Involved</button>
+    </div>
   </section>
+  
 
   <main>
     <h1>Home</h1>
@@ -55,7 +65,16 @@
     <section class="info-panels">
       <div class="panel events">
         <h2>Events</h2>
-        <p>Upcoming local events will be displayed here.</p>
+        <article class="event">
+          <h3>Annual Business Expo 2025</h3>
+          <p><strong>Date:</strong> June 15, 2025</p>
+          <p><strong>Time:</strong> 10:00 AM – 4:00 PM</p>
+          <p><strong>Location:</strong> Timbuktu Community Center</p>
+          <p>
+            Join local entrepreneurs and organizations for a day of networking,
+            workshops, and keynote speakers. Open to the public and free to attend.
+          </p>
+        </article>
       </div>
       <div class="panel weather">
         <h2>Current Weather</h2>
@@ -93,6 +112,13 @@
         <!-- More member cards can be added here -->
       </div>
     </section>
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container" class="spotlight-grid">
+        <!-- Spotlight cards will be inserted here -->
+      </div>
+    </section>
+    
   </main>
 
   <footer>

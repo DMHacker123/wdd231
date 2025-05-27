@@ -16,6 +16,8 @@ header {
   color: white;
   padding: 1rem;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 100;
 }
 
 .logo {
@@ -35,10 +37,6 @@ header {
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
-}
-
-#navMenu.hidden {
-  display: none;
 }
 
 #navMenu ul {
@@ -70,6 +68,7 @@ header {
 }
 
 /* Hero */
+
 .hero img {
   width: 100%;
   height: auto;
@@ -206,23 +205,49 @@ footer .social img {
   .logo {
     margin-bottom: 0.5rem;
   }
+
+  #menuToggle {
+    display: block;
+  }
+
+  #navMenu ul {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul li {
+    padding: 1em;
+    border-bottom: 1px solid #ccc;
+  }
 }
 
-/* Dark Mode Support */
-body.dark-mode {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
+@media (min-width: 769px) {
+  #navMenu {
+    display: block !important;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
+  #navMenu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
 }
 
-body.dark-mode .member-card {
-  background: #2a2a2a;
-  border-color: #555;
+/* Navigation visibility toggle */
+#navMenu {
+  display: none;
 }
 
-body.dark-mode footer {
-  background: #000;
-}
-
-body.dark-mode a {
-  color: #ffcc00;
+#navMenu.show {
+  display: block;
 }

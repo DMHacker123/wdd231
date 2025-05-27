@@ -1,97 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Darwin M. Matos - Course Home Page">
-    <meta name="author" content="Darwin M. Matos">
-    <title>Darwin M. Matos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="icon" href="favicon.ico">
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/course.js" defer></script>
-    <script src="scripts/date.js" defer></script>
-    <meta property="og:title" content="Homepage - Darwin M. Matos Courses">
-<meta property="og:description" content="Darwin M. Matos - Course Home Page">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://www.churchofjesuschrist.org/imgs/45e59c1c726d11ec9eb5eeeeac1ea79d5f76a9ce/full/!1280%2C674/0/default
-" />
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="BYU-I/COURSES">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Darwin M. Matos - Course Home Page" />
+  <meta name="author" content="Darwin M. Matos" />
+  <title>Darwin M. Matos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="icon" href="favicon.ico" />
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Homepage - Darwin M. Matos Courses" />
+  <meta property="og:description" content="Darwin M. Matos - Course Home Page" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BYU-I/COURSES" />
 </head>
+
 <body>
-    <header>
-        <div class="header-content">
-            <img src="images/WhatsApp_Image_2024-09-21_at_10.45.23_AM(1).jpeg" alt="Darwin M. Matos">
-            <h1>Darwin M. Matos</h1>
-            <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
-        </div>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">Final</a></li>
-                <li><a href="#">GitHub Profile</a></li>
-                <li><a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="header-content">
+      <img src="images/WhatsApp_Image_2024-09-21_at_10.45.23_AM(1).jpeg" alt="Portrait of Darwin M. Matos" />
+      <h1>Darwin M. Matos</h1>
+      <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="#">Final</a></li>
+        <li><a href="#">GitHub Profile</a></li>
+        <li><a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I’m Darwin Matos, a passionate web and computer programming student from BYU-I. I love exploring new technologies, building creative web projects, and learning about global cultures. Welcome to my portfolio site!</p>
-          </section>
-        <section class="cards">
-            <div class="card">
-                <h2>Course Work</h2>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="card">
-                <h2>Brigham Young University</h2>
-                <img src="images/images.jpeg" alt="Brigham Young University campus">
-                <p>Web Development Career</p>
-            </div>
-        </section>
+  <main>
+    <!-- Welcome Section -->
+    <section class="welcome">
+      <h2>Welcome to My Course Portfolio</h2>
+      <p>I'm glad you're here! This site showcases my progress and projects as a Web and Computer Programming student at BYU-Idaho. Feel free to explore, connect, and learn more about my journey.</p>
+    </section>
 
-        <section class="certificate-section">
-            <h2>Web and Computer Programming Certificate</h2>
-            <div class="certificate-buttons">
-                <button>All</button>
-                <button>CSE</button>
-                <button>WDD</button>
-            </div>
-            <div class="courses">
-                <div class="course">CSE 110</div>
-                <div class="course">WDD 130</div>
-                <div class="course">CSE 111</div>
-                <div class="course">CSE 210</div>
-                <div class="course">WDD 131</div>
-                <div class="course">WDD 231</div>
-            </div>
-            <div class="courses" id="coursesContainer">
-                <div class="course" data-credits="2">CSE 110</div>
-                <div class="course" data-credits="2">WDD 130</div>
-                <div class="course" data-credits="2">CSE 111</div>
-                <div class="course" data-credits="2">CSE 210</div>
-                <div class="course" data-credits="2">WDD 131</div>
-                <div class="course" data-credits="2">WDD 231</div>
-              </div>
-              
-              <!-- Where total credits will display -->
-              <p id="totalCredits">Total Credits: 0</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy;2025  Darwin M. Matos  Dominican Republic</p>
-        <p class="update">Last Update: 01/01/1970 12:00:00</p>
-        <img src="images/Flag_of_the_Dominican_Republic.svg.webp" alt="Dominican Republic Flag">
-    </footer>
+    <!-- Call-to-Action Buttons -->
+    <div class="cta-buttons">
+      <a href="#coursesContainer" class="button">Explore My Courses</a>
+    </div>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I'm Darwin Matos from the Dominican Republic. I'm currently pursuing a certificate in Web and Computer Programming at BYU-Idaho. I'm passionate about technology, design, and creating meaningful digital experiences. Explore my coursework, connect with me, and see what I’ve been working on!</p>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards">
+      <div class="card">
+        <h2>Course Work</h2>
+        <ul>
+          <li>HTML & CSS Projects</li>
+          <li>Responsive Design</li>
+          <li>JavaScript Interactions</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Brigham Young University</h2>
+        <img src="images/images.jpeg" alt="Scenic view of Brigham Young University campus" />
+        <p>Web Development Career</p>
+      </div>
+    </section>
+
+    <!-- Certificate & Courses Section -->
+    <section class="certificate-section">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="certificate-buttons">
+        <button>All</button>
+        <button>CSE</button>
+        <button>WDD</button>
+      </div>
+
+      <div class="courses" id="coursesContainer">
+        <div class="course" data-credits="2">CSE 110</div>
+        <div class="course" data-credits="2">WDD 130</div>
+        <div class="course" data-credits="2">CSE 111</div>
+        <div class="course" data-credits="2">CSE 210</div>
+        <div class="course" data-credits="2">WDD 131</div>
+        <div class="course" data-credits="2">WDD 231</div>
+      </div>
+
+      <p id="totalCredits">Total Credits: 0</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;2025 Darwin M. Matos – Dominican Republic</p>
+    <p class="update">Last Update: 01/01/1970 12:00:00</p>
+    <img src="images/Flag_of_the_Dominican_Republic.svg.webp" alt="Dominican Republic Flag" />
+  </footer>
 </body>
 </html>
