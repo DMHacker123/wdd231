@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join the Timbuktu Chamber of Commerce to connect with the local business community." />
+  <meta name="author" content="Darwin Matos" />
+  <title>Join the Chamber - Timbuktu Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Join the Chamber - Timbuktu Chamber of Commerce" />
+  <meta property="og:description" content="Become a member of the Timbuktu Chamber of Commerce." />
+  <meta property="og:url" content="https://github.com/DMHacker123" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <link rel="stylesheet" href="styles/directory.css" />
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/camberofcommerce.jpeg" alt="Timbuktu Chamber of Commerce Logo" />
+      <span>Chamber of Commerce</span>
+    </div>
+
+    <button id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+
+    <nav id="navMenu" class="hidden" role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" aria-current="page">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h1>Join the Chamber</h1>
+      <p>Become a member of the Timbuktu Chamber of Commerce by completing the form below.</p>
+
+      <form action="thankyou.html" method="get" id="joinForm">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="fname" required title="Enter your first name" autocomplete="given-name"/>
+
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="lname" required title="Enter your last name" autocomplete="family-name"/>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required title="Enter a valid email address" />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" title="Enter a 10-digit phone number" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Business Details</legend>
+
+          <label for="businessName">Business Name:</label>
+          <input type="text" id="businessName" name="businessName" required title="Enter your business name" />
+
+          <label for="position">Position in Business:</label>
+          <input type="text" id="position" name="position" title="Enter your position or role in the business" />
+
+          <label for="membership">Membership Level:</label>
+          <select id="membership" name="membership" required title="Select your preferred membership level">
+            <option value="">Select one</option>
+            <option value="np">Non-Profit</option>
+            <option value="bronze">Bronze</option>
+            <option value="silver">Silver</option>
+            <option value="gold">Gold</option>
+          </select>
+
+          <label for="description">Business Description:</label>
+          <textarea id="description" name="description" rows="4" placeholder="Tell us about your business..." title="Provide a short description of your business"></textarea>
+        </fieldset>
+
+        <button type="submit" class="cta-button" title="Submit your membership application">Submit Application</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contact">
+      <p><strong>Timbuktu Chamber of Commerce</strong><br />
+        10 Rue De La Paix<br />
+        Timbuktu, Mali 999<br />
+        <a href="mailto:info@timbuk.org">info@timbuk.org</a><br />
+        (223) 555-2300
+      </p>
+    </div>
+
+    <div class="social">
+      <a href="https://youtube.com/timbuktu" aria-label="YouTube page"><img src="images/youtube_icon.png" alt="YouTube" /></a>
+      <a href="https://twitter.com/timbuktu" aria-label="Twitter page"><img src="images/logo_of_twitter.svg.webp" alt="Twitter" /></a>
+      <a href="https://linkedin.com/timbuktu" aria-label="LinkedIn page"><img src="images/linkedin_logo.png" alt="LinkedIn" /></a>
+    </div>
+
+    <div class="project-info">
+      <p>
+        WDD 231 Class Project<br />
+        Darwin Matos<br />
+        &copy; <span id="year"></span> Timbuktu Chamber of Commerce<br />
+        Last Modification: <span id="lastModified"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
