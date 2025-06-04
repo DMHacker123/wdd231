@@ -47,47 +47,57 @@
       <h1>Join the Chamber</h1>
       <p>Become a member of the Timbuktu Chamber of Commerce by completing the form below.</p>
 
-      <form action="thankyou.html" method="get" id="joinForm">
-        <fieldset>
-          <legend>Personal Information</legend>
+<form action="thankyou.html" method="get">
+  <label for="first">First Name:</label>
+  <input type="text" id="first" name="first" required />
 
-          <label for="fname">First Name:</label>
-          <input type="text" id="fname" name="fname"  title="Enter your first name" autocomplete="given-name"/>
+  <label for="last">Last Name:</label>
+  <input type="text" id="last" name="last" required />
 
-          <label for="lname">Last Name:</label>
-          <input type="text" id="lname" name="lname"  title="Enter your last name" autocomplete="family-name"/>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required />
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email"  title="Enter a valid email address" />
+  <label for="phone">Phone:</label>
+  <input type="tel" id="phone" name="phone" />
 
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" title="Enter a 10-digit phone number" />
-        </fieldset>
+  <label for="business">Business/Organization:</label>
+  <input type="text" id="business" name="business" />
 
-        <fieldset>
-          <legend>Business Details</legend>
+  <!-- Hidden date input -->
+  <input type="hidden" id="date" name="date" value="2025-06-04" />
 
-          <label for="businessName">Business Name:</label>
-          <input type="text" id="businessName" name="businessName" required title="Enter your business name" />
+  <button type="submit">Submit</button>
+</form>
 
-          <label for="position">Position in Business:</label>
-          <input type="text" id="position" name="position" title="Enter your position or role in the business" />
-          
-          <label for="membership">Membership Level:</label>
-          <select id="membership" name="membership" required title="Select your preferred membership level">
-            <option value="">Select one</option>
-            <option value="np">Non-Profit</option>
-            <option value="bronze">Bronze</option>
-            <option value="silver">Silver</option>
-            <option value="gold">Gold</option>
-          </select>
 
-          <label for="description">Business Description:</label>
-          <textarea id="description" name="description" rows="4" placeholder="Tell us about your business..." title="Provide a short description of your business"></textarea>
-        </fieldset>
+      <section class="membership-cards">
+  <h2>Membership Levels & Benefits</h2>
+  
+  <div class="card" data-modal="modal-np">
+    <h3>Non-Profit</h3>
+    <p>For registered nonprofit organizations</p>
+    <button>View Benefits</button>
+  </div>
 
-        <button type="submit" class="cta-button" title="Submit your membership application">Submit Application</button>
-      </form>
+  <div class="card" data-modal="modal-bronze">
+    <h3>Bronze</h3>
+    <p>Basic visibility and networking</p>
+    <button>View Benefits</button>
+  </div>
+
+  <div class="card" data-modal="modal-silver">
+    <h3>Silver</h3>
+    <p>Enhanced exposure and support</p>
+    <button>View Benefits</button>
+  </div>
+
+  <div class="card" data-modal="modal-gold">
+    <h3>Gold</h3>
+    <p>Premium promotional opportunities</p>
+    <button>View Benefits</button>
+  </div>
+</section>
+
     </section>
   </main>
 
@@ -121,5 +131,53 @@
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
   </script>
+  <div id="modal-np" class="modal">
+  <div class="modal-content">
+    <span class="close" data-close="modal-np">&times;</span>
+    <h3>Non-Profit Benefits</h3>
+    <ul>
+      <li>Free listing in directory</li>
+      <li>Event access</li>
+      <li>Networking with local nonprofits</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal-bronze" class="modal">
+  <div class="modal-content">
+    <span class="close" data-close="modal-bronze">&times;</span>
+    <h3>Bronze Benefits</h3>
+    <ul>
+      <li>Directory listing with link</li>
+      <li>Monthly newsletter feature</li>
+      <li>Access to business workshops</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal-silver" class="modal">
+  <div class="modal-content">
+    <span class="close" data-close="modal-silver">&times;</span>
+    <h3>Silver Benefits</h3>
+    <ul>
+      <li>All Bronze benefits</li>
+      <li>Quarterly advertising discounts</li>
+      <li>Spotlight in social media</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal-gold" class="modal">
+  <div class="modal-content">
+    <span class="close" data-close="modal-gold">&times;</span>
+    <h3>Gold Benefits</h3>
+    <ul>
+      <li>All Silver benefits</li>
+      <li>Priority placement in promotions</li>
+      <li>VIP event invitations</li>
+    </ul>
+  </div>
+</div>
+
 </body>
 </html>
