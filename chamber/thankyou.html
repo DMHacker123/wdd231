@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thank You</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/directory.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 1rem;
+    }
+    main {
+      padding: 2rem;
+    }
+    .summary {
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      max-width: 600px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,28 +39,27 @@
   </header>
   <main>
     <p>Your form has been submitted successfully.</p>
-    <div id="formDetails">
+    <div class="summary">
       <p><strong>First Name:</strong> <span id="firstName"></span></p>
       <p><strong>Last Name:</strong> <span id="lastName"></span></p>
       <p><strong>Email:</strong> <span id="email"></span></p>
       <p><strong>Phone:</strong> <span id="phone"></span></p>
       <p><strong>Business/Organization:</strong> <span id="business"></span></p>
       <p><strong>Date:</strong> <span id="date"></span></p>
+      <p><strong>Membership Level:</strong> <span id="membership"></span></p>
     </div>
     <a href="index.html">Return to Home</a>
   </main>
+
   <script>
-  // Get URL parameters
-  const params = new URLSearchParams(window.location.search);
-
-  // Assign values to the respective span elements
-  document.getElementById("firstName").textContent = params.get("firstName") || "N/A";
-  document.getElementById("lastName").textContent = params.get("lastName") || "N/A";
-  document.getElementById("email").textContent = params.get("email") || "N/A";
-  document.getElementById("phone").textContent = params.get("phone") || "N/A";
-  document.getElementById("business").textContent = params.get("business") || "N/A";
-  document.getElementById("date").textContent = params.get("date") || "N/A";
-</script>
-
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("firstName").textContent = params.get("firstName") || "N/A";
+    document.getElementById("lastName").textContent = params.get("lastName") || "N/A";
+    document.getElementById("email").textContent = params.get("email") || "N/A";
+    document.getElementById("phone").textContent = params.get("phone") || "N/A";
+    document.getElementById("business").textContent = params.get("business") || "N/A";
+    document.getElementById("date").textContent = params.get("date") || "N/A";
+    document.getElementById("membership").textContent = params.get("membership") || "N/A";
+  </script>
 </body>
 </html>

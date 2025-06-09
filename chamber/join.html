@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Join the Timbuktu Chamber of Commerce to connect with the local business community." />
   <meta name="author" content="Darwin Matos" />
-  <meta property="og:image" content="https://dmhacker123.github.io/timbuktu-chamber/images/chamber-og-image.jpg" />
-
-  <title>Join the Chamber - Timbuktu Chamber of Commerce</title>
-
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
   <!-- Open Graph Meta -->
   <meta property="og:title" content="Join the Chamber - Timbuktu Chamber of Commerce" />
   <meta property="og:description" content="Become a member of the Timbuktu Chamber of Commerce." />
+  <meta property="og:image" content="https://dmhacker123.github.io/timbuktu-chamber/images/chamber-og-image.jpg" />
   <meta property="og:url" content="https://dmhacker123.github.io/wdd231-chamber/join.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
 
-  <link rel="stylesheet" href="../chamber/styles/join.css" />
+  <title>Join the Chamber - Timbuktu Chamber of Commerce</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../chamber/styles/directory.css" media="print" onload="this.media='all'" />
   <script src="scripts/directory.js" defer></script>
 </head>
 
 <body>
   <header>
     <div class="logo">
-      <img src="images/camberofcommerce.jpeg" alt="Timbuktu Chamber of Commerce Logo" />
+      <img src="images/chamberofcommerce.jpeg" alt="Timbuktu Chamber of Commerce Logo" loading="lazy" />
       <span>Chamber of Commerce</span>
     </div>
 
@@ -47,58 +45,100 @@
       <h1>Join the Chamber</h1>
       <p>Become a member of the Timbuktu Chamber of Commerce by completing the form below.</p>
 
-<form action="thankyou.html" method="get">
-  <label for="first">First Name:</label>
-  <input type="text" id="first" name="first" required />
+      <form id="joinForm" method="get" action="thankyou.html">
+        <label for="first">First Name:</label>
+        <input type="text" id="first" name="first" required />
 
-  <label for="last">Last Name:</label>
-  <input type="text" id="last" name="last" required />
+        <label for="last">Last Name:</label>
+        <input type="text" id="last" name="last" required />
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
 
-  <label for="phone">Phone:</label>
-  <input type="tel" id="phone" name="phone" />
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required />
 
-  <label for="business">Business/Organization:</label>
-  <input type="text" id="business" name="business" />
+        <label for="business">Business Name:</label>
+        <input type="text" id="business" name="business" required />
 
-  <!-- Hidden date input -->
-  <input type="hidden" id="date" name="date" value="2025-06-04" />
+        <label for="date">Join Date:</label>
+        <input type="date" id="date" name="date" required />
 
-  <button type="submit">Submit</button>
-</form>
+        <label for="membership">Membership Level:</label>
+        <select id="membership" name="membership" required>
+          <option value="">Select a membership level</option>
+          <option value="1">Member</option>
+          <option value="2">Silver</option>
+          <option value="3">Gold</option>
+        </select>
 
+        <div id="benefits" class="benefits-box" aria-live="polite"></div>
 
-      <section class="membership-cards">
-  <h2>Membership Levels & Benefits</h2>
-  
-  <div class="card" data-modal="modal-np">
-    <h3>Non-Profit</h3>
-    <p>For registered nonprofit organizations</p>
-    <button>View Benefits</button>
-  </div>
+        <button type="submit">Join Now</button>
+      </form>
 
-  <div class="card" data-modal="modal-bronze">
-    <h3>Bronze</h3>
-    <p>Basic visibility and networking</p>
-    <button>View Benefits</button>
-  </div>
-
-  <div class="card" data-modal="modal-silver">
-    <h3>Silver</h3>
-    <p>Enhanced exposure and support</p>
-    <button>View Benefits</button>
-  </div>
-
-  <div class="card" data-modal="modal-gold">
-    <h3>Gold</h3>
-    <p>Premium promotional opportunities</p>
-    <button>View Benefits</button>
-  </div>
-</section>
-
+      <!-- Learn More Button -->
+      <div class="card" data-modal="modal1">
+        <button>Learn More</button>
+      </div>
     </section>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" data-close="modal1">&times;</span>
+        <h2>Membership Benefits</h2>
+        <p>Details about Member, Silver, and Gold benefits...</p>
+      </div>
+    </div>
+
+    <div id="modal-np" class="modal">
+      <div class="modal-content">
+        <span class="close" data-close="modal-np">&times;</span>
+        <h3>Non-Profit Benefits</h3>
+        <ul>
+          <li>Free listing in directory</li>
+          <li>Event access</li>
+          <li>Networking with local nonprofits</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="modal-bronze" class="modal">
+      <div class="modal-content">
+        <span class="close" data-close="modal-bronze">&times;</span>
+        <h3>Bronze Benefits</h3>
+        <ul>
+          <li>Directory listing with link</li>
+          <li>Monthly newsletter feature</li>
+          <li>Access to business workshops</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="modal-silver" class="modal">
+      <div class="modal-content">
+        <span class="close" data-close="modal-silver">&times;</span>
+        <h3>Silver Benefits</h3>
+        <ul>
+          <li>All Bronze benefits</li>
+          <li>Quarterly advertising discounts</li>
+          <li>Spotlight in social media</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="modal-gold" class="modal">
+      <div class="modal-content">
+        <span class="close" data-close="modal-gold">&times;</span>
+        <h3>Gold Benefits</h3>
+        <ul>
+          <li>All Silver benefits</li>
+          <li>Priority placement in promotions</li>
+          <li>VIP event invitations</li>
+        </ul>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -112,9 +152,9 @@
     </div>
 
     <div class="social">
-      <a href="https://youtube.com/timbuktu" aria-label="YouTube page"><img src="images/youtube_icon.png" alt="YouTube" width="24" height="24"/></a>
-      <a href="https://twitter.com/timbuktu" aria-label="Twitter page"><img src="images/logo_of_twitter.svg.webp" alt="Twitter" width="24" height="24"/></a>
-      <a href="https://linkedin.com/timbuktu" aria-label="LinkedIn page"><img src="images/linkedin_logo.png" alt="LinkedIn" width="24" height="24"/></a>
+      <a href="https://youtube.com/timbuktu" aria-label="YouTube page"><img src="images/youtube_icon.png" alt="YouTube" loading="lazy" /></a>
+      <a href="https://twitter.com/timbuktu" aria-label="Twitter page"><img src="images/logo_of_twitter.svg.webp" alt="Twitter" loading="lazy" /></a>
+      <a href="https://linkedin.com/timbuktu" aria-label="LinkedIn page"><img src="images/linkedin_logo.png" alt="LinkedIn" loading="lazy" /></a>
     </div>
 
     <div class="project-info">
@@ -131,53 +171,5 @@
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
   </script>
-  <div id="modal-np" class="modal">
-  <div class="modal-content">
-    <span class="close" data-close="modal-np">&times;</span>
-    <h3>Non-Profit Benefits</h3>
-    <ul>
-      <li>Free listing in directory</li>
-      <li>Event access</li>
-      <li>Networking with local nonprofits</li>
-    </ul>
-  </div>
-</div>
-
-<div id="modal-bronze" class="modal">
-  <div class="modal-content">
-    <span class="close" data-close="modal-bronze">&times;</span>
-    <h3>Bronze Benefits</h3>
-    <ul>
-      <li>Directory listing with link</li>
-      <li>Monthly newsletter feature</li>
-      <li>Access to business workshops</li>
-    </ul>
-  </div>
-</div>
-
-<div id="modal-silver" class="modal">
-  <div class="modal-content">
-    <span class="close" data-close="modal-silver">&times;</span>
-    <h3>Silver Benefits</h3>
-    <ul>
-      <li>All Bronze benefits</li>
-      <li>Quarterly advertising discounts</li>
-      <li>Spotlight in social media</li>
-    </ul>
-  </div>
-</div>
-
-<div id="modal-gold" class="modal">
-  <div class="modal-content">
-    <span class="close" data-close="modal-gold">&times;</span>
-    <h3>Gold Benefits</h3>
-    <ul>
-      <li>All Silver benefits</li>
-      <li>Priority placement in promotions</li>
-      <li>VIP event invitations</li>
-    </ul>
-  </div>
-</div>
-
 </body>
 </html>
