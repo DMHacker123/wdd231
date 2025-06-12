@@ -1,0 +1,348 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #003366;
+  color: white;
+  padding: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  height: 40px;
+  vertical-align: middle;
+}
+
+#menuToggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#navMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+#navMenu ul li a,
+#navMenu ul li button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+
+#navMenu ul li a:hover,
+#navMenu ul li a:focus,
+#navMenu ul li button:hover,
+#navMenu ul li button:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: 2px solid #ffcc00;
+  border-radius: 4px;
+}
+
+/* Hero */
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.cta-button {
+  display: block;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background-color: #006699;
+  color: white;
+  border-radius: 4px;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #004466;
+  outline: 2px solid #ffcc00;
+}
+
+/* Directory Section */
+.directory-section {
+  padding: 1rem;
+}
+
+#view-toggle {
+  margin-bottom: 1rem;
+}
+
+#view-toggle button {
+  margin-right: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #006699;
+  color: white;
+  border-radius: 4px;
+}
+
+#view-toggle button:hover,
+#view-toggle button:focus {
+  background-color: #004466;
+  outline: 2px solid #ffcc00;
+}
+
+/* Grid and List Views */
+#members.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+#members.list-view {
+  display: block;
+}
+
+.member-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+#members.list-view .member-card {
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  margin-bottom: 1rem;
+}
+
+.member-logo {
+  width: 100%;
+  height: auto; /* Maintains natural aspect ratio */
+  object-fit: contain; /* or 'cover' if you want it to fill box while cropping */
+  max-width: 200px; /* Optional max constraint */
+  display: block;
+  margin: 0 auto;
+}
+
+
+#members.list-view .member-logo {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+footer .social img {
+  height: 24px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  #navMenu ul {
+    flex-direction: column;
+    background: #003366;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  #navMenu ul li {
+    margin: 0.5rem 0;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  #menuToggle {
+    display: block;
+  }
+
+  #navMenu ul {
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul li {
+    padding: 1em;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+@media (min-width: 769px) {
+  #navMenu {
+    display: block !important;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
+  #navMenu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+}
+
+/* Navigation visibility toggle */
+#navMenu {
+  display: none;
+}
+
+#navMenu.show {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 1rem;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  transform: translateY(-30px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.modal.open .modal-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.benefits-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f3f3f3;
+  border-left: 4px solid #4caf50;
+  font-size: 0.95rem;
+}
+    .summary {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .summary h2 {
+      margin-top: 0;
+    }
+    .summary p {
+      margin: 0.5rem 0;
+    }

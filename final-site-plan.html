@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Plan - Web Development Services</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #1e3a8a;   /* Dark Blue */
+      --accent-color: #10b981;   /* Teal Green */
+      --text-color: #1f2937;     /* Dark Gray for paragraphs */
+      --background-color: #ffffff;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--primary-color);
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+    }
+
+    ul li::marker {
+      color: var(--accent-color);
+    }
+
+    strong {
+      color: var(--primary-color);
+    }
+
+    em {
+      color: var(--accent-color);
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      background-color: #f0f0f0;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    footer {
+      border-top: 2px solid var(--accent-color);
+      margin-top: 2rem;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--primary-color);
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Plan: Web Development Services</h1>
+
+  <h2>Site Name</h2>
+  <p><strong>Proposed Name:</strong> <em>Web Development Services</em></p>
+  <p>
+    This name was chosen because it is clear, descriptive, and directly communicates the nature of the site. 
+    It helps users immediately understand that the website offers services related to building, designing, 
+    or maintaining websites. The name is professional, searchable, and relevant to potential clients or users 
+    seeking digital solutions.
+  </p>
+
+  <h2>Site Purpose</h2>
+  <p>
+    The purpose of this website is to provide information about web development services, showcase past projects, 
+    and offer a way for clients to inquire about or request new websites or maintenance work. It will help 
+    establish credibility, provide contact opportunities, and explain available service options.
+  </p>
+
+  <h2>Target Audience</h2>
+  <p>
+    The target audience includes small business owners, startups, freelancers, and organizations in need of 
+    a professional website, redesign, or technical support. The site also appeals to non-technical users 
+    seeking easy-to-understand service offerings.
+  </p>
+
+  <h2>Scenarios</h2>
+  <ul>
+    <li>
+      <strong>"How much does it cost to build a simple website for my business?"</strong><br />
+      A potential client wants pricing or package information for basic website services.
+    </li>
+    <li>
+      <strong>"Can I see examples of websites you've created?"</strong><br />
+      A visitor is evaluating your past work to decide if you're the right fit for their project.
+    </li>
+  </ul>
+
+  <h2>Page Structure (3 Pages Total)</h2>
+  <ul>
+    <li><strong>Home (index.html)</strong><br />
+      Welcome message, overview of services, and highlights of recent work or testimonials.
+    </li>
+    <li><strong>About (about.html)</strong><br />
+      Background information on the developer or team, mission, and development philosophy.
+    </li>
+    <li><strong>Services (services.html)</strong><br />
+      Detailed list of available services (e.g., website design, maintenance, SEO), with optional pricing or contact CTA.
+    </li>
+  </ul>
+
+  <h2>Navigation</h2>
+  <p>All pages will feature a top navigation bar linking to:</p>
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+  </ul>
+
+  <h2>Color Scheme</h2>
+  <ul>
+    <li><strong>Primary Color – Dark Blue (#1e3a8a):</strong> Used for headings, strong text, and key elements.</li>
+    <li><strong>Accent Color – Teal Green (#10b981):</strong> Used for bullet points, emphasis, and design borders.</li>
+  </ul>
+
+  <h2>Typography</h2>
+  <ul>
+    <li><strong>'Poppins', sans-serif:</strong> Used for all headings (`h1`, `h2`, etc.). It provides a clean, modern feel.</li>
+    <li><strong>'Roboto', sans-serif:</strong> Used for all body text, paragraphs, and general content for clarity and readability.</li>
+    <li><strong>'Courier New', monospace:</strong> Used for <code>code</code> snippets or technical terms to distinguish them visually.</li>
+  </ul>
+
+  <h2>Design Guidelines</h2>
+  <ul>
+    <li><strong>Layout:</strong> Responsive design using Flexbox or CSS Grid</li>
+    <li><strong>Color Scheme:</strong> Professional tones like dark blue and green</li>
+    <li><strong>Typography:</strong> Modern sans-serif fonts (see above)</li>
+    <li><strong>Branding:</strong> Simple logo and favicon that match the domain and service type</li>
+  </ul>
+
+  <h2>Accessibility & Usability</h2>
+  <ul>
+    <li>Semantic HTML for headings, navigation, and structure</li>
+    <li>Alt text on all images and icons</li>
+    <li>Keyboard-accessible navigation and forms</li>
+    <li>Readable text with sufficient contrast and flexible sizing</li>
+  </ul>
+
+  <footer>
+    <p>&copy; Web Development Services <span id="year"></span></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
+
+
+<!-- Mobile View Wireframe Diagram 
+
++-----------------------------+
+|        HEADER / LOGO       |
++-----------------------------+
+|        NAVIGATION          |
++-----------------------------+
+|        HERO IMAGE          |
+|      "Welcome message"     |
++-----------------------------+
+|     FEATURE / SERVICE 1    |
++-----------------------------+
+|     FEATURE / SERVICE 2    |
++-----------------------------+
+|     CALL TO ACTION (CTA)   |
++-----------------------------+
+|          FOOTER            |
++-----------------------------+
+
+
+Desktop View Wireframe Diagram
+
++------------------------------------------------------------+
+|                          HEADER / LOGO                     |
+|                  NAVIGATION (Home | Services | Contact)    |
++------------------------------------------------------------+
+|                        HERO IMAGE / INTRO                  |
+|               "Welcome to Web Development Services"        |
++------------------------------------------------------------+
+|  FEATURE 1   |   FEATURE 2   |   FEATURE 3   |   FEATURE 4  |
++-------------+---------------+---------------+--------------+
+|          CALL TO ACTION (e.g., Get a Quote)                |
++------------------------------------------------------------+
+|                          FOOTER                            |
++------------------------------------------------------------+
+-->
