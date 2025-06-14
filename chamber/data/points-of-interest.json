@@ -1,0 +1,52 @@
+{
+  "points": [
+    {
+      "name": "Sankore Mosque",
+      "address": "Sankore District, Timbuktu 999, Mali",
+      "description": "Built in the 14th century, this mud-and-wood mosque once hosted thousands of students at the Sankore University. It's a symbol of Timbuktu's golden age as a center of Islamic learning.",
+      "image": "images/Timbuktu_Sankore_Mosque.webp"
+    },
+    {
+      "name": "Sidi Yahya Mosque",
+      "address": "Sidi Yahya Quarter, Central Timbuktu 999, Mali",
+      "description": "Completed in 1440, the mosque remains a revered place of worship and a monument to the spiritual legacy of the region's scholars and saints.",
+      "image": "images/Sidi_Yahya_Mosque.webp"
+    },
+    {
+      "name": "Ahmed Baba Institute",
+      "address": "Rue de la Bibliothèque, Timbuktu 999, Mali",
+      "description": "A modern facility preserving over 30,000 ancient manuscripts in Arabic and African languages, bridging past and present scholarship.",
+      "image": "images/Ahmed_Baba_Institute.webp"
+    },
+    {
+      "name": "Timbuktu Museum",
+      "address": "Avenue des Explorateurs, Timbuktu 999, Mali",
+      "description": "This museum highlights the city’s history through exhibits on Saharan trade, manuscripts, and Tuareg artifacts.",
+      "image": "images/Timbuktu-Museum.webp"
+    },
+    {
+      "name": "Flame Tree Square",
+      "address": "Place de l’Arbre Rouge, Timbuktu 999, Mali",
+      "description": "A lively plaza known for its iconic flame tree, artisan stalls, and cultural events that reflect the spirit of the local community.",
+      "image": "images/flame-tree-at-tjdf-squarejpg.webp"
+    },
+    {
+      "name": "Salt Caravan Routes Memorial",
+      "address": "Desert Trail Lookout, North of Timbuktu, Mali",
+      "description": "A tribute site marking ancient trans-Saharan trade routes where camel caravans once hauled salt, gold, and other goods across the Sahara.",
+      "image": "images/SaltCaravanRoutes.webp"
+    },
+    {
+      "name": "Tuareg Craft Market",
+      "address": "Rue des Artisans, Timbuktu 999, Mali",
+      "description": "A vibrant open-air market featuring handcrafted leatherwork, silver jewelry, woven goods, and textiles made by Tuareg artisans.",
+      "image": "images/TuaregCraftMarket.webp"
+    },
+    {
+      "name": "Djinguereber Mosque",
+      "address": "Djinguereber Street, Timbuktu 999, Mali",
+      "description": "Commissioned by Emperor Mansa Musa in 1327, this mosque is built from earth and wood, and remains a functioning center of worship and cultural pride.",
+      "image": "images/DjinguereberMosque.webp"
+    }
+  ]
+}
