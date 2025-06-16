@@ -1,13 +1,13 @@
 // Update footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Toggle mobile nav
+// Toggle mobile nav menu
 document.getElementById("menu-toggle").addEventListener("click", () => {
   const nav = document.getElementById("nav-links");
-  nav.classList.toggle("hidden");
+  nav.classList.toggle("open"); // Use .open to match CSS
 });
 
-// Contact form fake submit
+// Handle fake contact form submit
 const form = document.getElementById("contact-form");
 if (form) {
   form.addEventListener("submit", (e) => {
@@ -16,3 +16,13 @@ if (form) {
     form.reset();
   });
 }
+
+// Highlight the active nav link based on current URL
+const currentPath = window.location.pathname.split("/").pop();
+const navLinks = document.querySelectorAll("#nav-links a");
+
+navLinks.forEach(link => {
+  if (link.getAttribute("href") === currentPath) {
+    link.classList.add("active");
+  }
+});

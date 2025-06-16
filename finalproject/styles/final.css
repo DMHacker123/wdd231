@@ -1,3 +1,4 @@
+/* Reset & Base Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,30 +10,36 @@ body {
   line-height: 1.6;
 }
 
+/* Container Utility */
 .container {
   max-width: 960px;
   margin: auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Header Styles */
 header {
-  background: #f8f8f8;
+  background-color: #003366;
+  color: white;
   border-bottom: 1px solid #ddd;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+/* Headings */
+h1 {
+  font-size: 1.75rem;
 }
 
-nav ul.hidden {
-  display: none;
-  flex-direction: column;
-  margin-top: 0.5rem;
+h1, h2, h3 {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+/* Navigation */
+nav {
+  position: relative;
 }
 
 nav button {
@@ -40,20 +47,68 @@ nav button {
   font-size: 1.5rem;
   background: none;
   border: none;
+  color: white;
   cursor: pointer;
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#nav-links {
+  display: flex;
+}
+
+#nav-links.open {
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+nav a:focus,
+button:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+#nav-links a.active {
+  background-color: white;
+  color: #003366;
+  border-radius: 5px;
+}
+
+/* Main Content */
 main {
   padding: 2rem 1rem;
 }
 
+/* Sections */
 .hero,
 .content,
 .form-section {
   text-align: center;
   margin-top: 2rem;
+  padding: 4rem 2rem;
 }
 
+.hero h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Form Styles */
 form {
   display: flex;
   flex-direction: column;
@@ -75,29 +130,40 @@ button {
   padding: 0.75rem;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #005fa3;
 }
 
+/* Footer */
 footer {
-  background: #f0f0f0;
+  background-color: #003366;
+  color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .success {
   color: green;
 }
 
+/* Responsive Navigation */
 @media (max-width: 768px) {
   nav button {
     display: block;
   }
 
-  nav ul {
+  #nav-links {
+    display: none;
     flex-direction: column;
+    gap: 0;
+    margin-top: 0.5rem;
+  }
+
+  #nav-links.open {
+    display: flex;
   }
 }

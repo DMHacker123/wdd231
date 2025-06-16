@@ -3,27 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Professional Web Development | Web Development Services</title>
+    <title>Website Design & Maintenance Services | Web Development Services</title>
+
+  <meta name="description" content="Browse our web design, maintenance, and SEO services. Transparent pricing and solutions for growing your business online." />
   <meta name="author" content="Darwin Matos" />
-  <meta name="description" content="Explore professional web development services tailored for small businesses and startups. Discover our work and start your digital journey today." />
 
-  <!-- Favicon -->
+    <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
-
-  <meta property="og:url" content="https://yourdomain.com/index.html" />
-  <meta property="og:image" content="https://yourdomain.com/images/og-preview.png" />
-
-  <!-- Twitter Card Support -->
-  <meta name="twitter:card" content="summary_large_image" />
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
 
   <style>
     :root {
-      --primary-color: #1e3a8a;   /* Dark Blue */
-      --accent-color: #10b981;   /* Teal Green */
-      --text-color: #1f2937;     /* Dark Gray */
+      --primary-color: #1e3a8a;
+      --accent-color: #10b981;
+      --text-color: #1f2937;
       --background-color: #ffffff;
     }
 
@@ -75,12 +71,30 @@
       margin-bottom: 2rem;
     }
 
-    blockquote {
-      font-style: italic;
-      border-left: 4px solid var(--accent-color);
-      margin: 1rem 0;
-      padding-left: 1rem;
-      color: #555;
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+
+    ul li::marker {
+      color: var(--accent-color);
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover,
+    .cta-button:focus {
+      background-color: #144a75;
+      outline: none;
     }
 
     footer {
@@ -96,28 +110,34 @@
 <body>
   <nav aria-label="Primary navigation">
     <ul>
-      <li><a href="../index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
+      <li><a href="services.html" class="active" aria-current="page">Services</a></li>
     </ul>
   </nav>
 
   <main>
-    <h1>Welcome to Web Development Services</h1>
+    <h1>Our Services</h1>
 
     <section>
-      <h2>Our Services Overview</h2>
-      <p>We offer professional website design, development, and maintenance services tailored to your business needs.</p>
+      <h2>Website Design</h2>
+      <p>Custom, responsive website design tailored to your brand and business goals.</p>
     </section>
 
     <section>
-      <h2>Recent Work & Testimonials</h2>
-      <blockquote>
-        "They built our site quickly and efficiently. The team was very responsive and the result exceeded our expectations." – Jane Doe, Startup Founder
-      </blockquote>
-      <blockquote>
-        "Our new website is sleek, fast, and mobile-friendly thanks to their expert services." – John Smith, Small Business Owner
-      </blockquote>
+      <h2>Maintenance & Support</h2>
+      <p>Reliable website maintenance services including updates, backups, and troubleshooting.</p>
+    </section>
+
+    <section>
+      <h2>Search Engine Optimization (SEO)</h2>
+      <p>Improve your website’s visibility and ranking on search engines through proven SEO strategies.</p>
+    </section>
+
+    <section>
+      <h2>Pricing & Contact</h2>
+      <p>Contact us today for a personalized quote and to discuss how we can support your project.</p>
+      <a href="contact.html" class="cta-button" role="button">Get a Quote</a>
     </section>
   </main>
 
