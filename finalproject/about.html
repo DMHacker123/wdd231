@@ -9,21 +9,23 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
-    <meta property="og:url" content="https://dmhacker123.github.io/wdd231/finalproject/index.html" />
-    <meta property="og:title" content="Web Development About | Professional Website Design & Maintenance" />
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="https://dmhacker123.github.io/wdd231/finalproject/index.html" />
+  <meta property="og:title" content="Web Development About | Professional Website Design & Maintenance" />
   <meta property="og:image" content="https://github.com/DMHacker123/wdd231/blob/main/finalproject/images/image1.png?raw=true" />
 
   <!-- Twitter Card Support -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Home | Web Development Services" />
+  <meta name="twitter:title" content="About | Web Development Services" />
   <meta name="twitter:description" content="Explore professional web development services tailored for small businesses and startups." />
   <meta name="twitter:image" content="https://github.com/DMHacker123/wdd231/blob/main/finalproject/images/image1.png?raw=true" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-<link rel="stylesheet" href="styles/final.css">
 
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/final.css" />
 </head>
 <body>
   <nav aria-label="Primary navigation">
@@ -38,8 +40,7 @@
     <section>
       <h2>Background</h2>
       <p>We are a dedicated team of web developers passionate about building clean, efficient, and responsive websites without relying on heavy frameworks.</p>
-            <img src="images/participatory.webp" alt="Web development illustration" width="800" height="400" style="max-width:100%;height:auto;aspect-ratio:2/1;" loading="lazy" />
-
+      <img src="images/participatory.webp" alt="Illustration of developers collaborating on a website interface" width="800" height="400" style="max-width:100%;height:auto;aspect-ratio:2/1;" loading="lazy" />
     </section>
 
     <section>
@@ -58,6 +59,7 @@
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 
+  <!-- Optional Script (keep in /scripts if used) -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
