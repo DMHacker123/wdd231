@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Custom Web Design",
+    "description": "Tailor-made designs that reflect your brand identity and drive engagement.",
+    "icon": "💻",
+    "price": "$1,500+",
+    "duration": "2-4 weeks"
+  },
+  {
+    "title": "Site Maintenance",
+    "description": "Ongoing updates, backups, and technical support to keep your site running smoothly.",
+    "icon": "🛠️",
+    "price": "$200/month",
+    "duration": "Ongoing"
+  },
+  {
+    "title": "SEO Optimization",
+    "description": "On-page and technical SEO services to boost visibility and rank higher on search engines.",
+    "icon": "📈",
+    "price": "$500+",
+    "duration": "1-3 months"
+  },
+  {
+    "title": "Performance Audits",
+    "description": "Comprehensive site audits to improve speed, UX, and overall effectiveness.",
+    "icon": "🚀",
+    "price": "$300",
+    "duration": "1 week"
+  },
+  {
+    "title": "Mobile Optimization",
+    "description": "Ensure your site looks and functions beautifully on phones and tablets.",
+    "icon": "📱",
+    "price": "$600+",
+    "duration": "1-2 weeks"
+  },
+  {
+    "title": "E-Commerce Solutions",
+    "description": "Build secure and scalable online stores to grow your sales.",
+    "icon": "🛒",
+    "price": "$2,000+",
+    "duration": "3-6 weeks"
+  },
+  {
+    "title": "Content Management",
+    "description": "Easy-to-use CMS setup and training for effortless site updates.",
+    "icon": "📝",
+    "price": "$800+",
+    "duration": "1-2 weeks"
+  },
+  {
+    "title": "Branding Services",
+    "description": "Create a consistent visual identity across all your digital platforms.",
+    "icon": "🎨",
+    "price": "$1,000+",
+    "duration": "2-3 weeks"
+  },
+  {
+    "title": "Social Media Integration",
+    "description": "Connect your website with popular social networks seamlessly.",
+    "icon": "🔗",
+    "price": "$300+",
+    "duration": "1 week"
+  },
+  {
+    "title": "Analytics Setup",
+    "description": "Track user behavior and performance with Google Analytics integration.",
+    "icon": "📊",
+    "price": "$250",
+    "duration": "2-3 days"
+  },
+  {
+    "title": "Accessibility Audits",
+    "description": "Ensure your website is usable by everyone, including people with disabilities.",
+    "icon": "♿",
+    "price": "$400",
+    "duration": "1 week"
+  },
+  {
+    "title": "Security Enhancements",
+    "description": "Protect your site from threats with up-to-date security measures.",
+    "icon": "🔒",
+    "price": "$600+",
+    "duration": "1-2 weeks"
+  },
+  {
+    "title": "Speed Optimization",
+    "description": "Improve load times and performance for better user experience.",
+    "icon": "⚡",
+    "price": "$350+",
+    "duration": "1 week"
+  },
+  {
+    "title": "Email Marketing Setup",
+    "description": "Integrate and automate email campaigns to boost engagement.",
+    "icon": "✉️",
+    "price": "$450+",
+    "duration": "1-2 weeks"
+  },
+  {
+    "title": "Custom Web Applications",
+    "description": "Develop bespoke web apps tailored to your unique business needs.",
+    "icon": "🖥️",
+    "price": "$5,000+",
+    "duration": "1-3 months"
+  }
+]

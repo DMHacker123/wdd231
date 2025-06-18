@@ -3,109 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Website Design & Maintenance Services | Web Development Services</title>
+  <title>Website Design & Maintenance Services | Web Development Services</title>
 
   <meta name="description" content="Browse our web design, maintenance, and SEO services. Transparent pricing and solutions for growing your business online." />
   <meta name="author" content="Darwin Matos" />
 
-    <!-- Favicon -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
-  
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="https://dmhacker123.github.io/wdd231/finalproject/index.html" />
+  <meta property="og:image" content="https://github.com/DMHacker123/wdd231/blob/main/finalproject/images/ChatGPT%20Image%20Jun%2016%2C%202025%2C%2005_27_29%20PM.png?raw=true" />
+
+  <!-- Twitter Card Support -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Home | Web Development Services" />
+  <meta name="twitter:description" content="Explore professional web development services tailored for small businesses and startups." />
+  <meta name="twitter:image" content="https://github.com/DMHacker123/wdd231/blob/main/finalproject/images/ChatGPT%20Image%20Jun%2016%2C%202025%2C%2005_27_29%20PM.png?raw=true" />
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles/final.css">
 
-  <style>
-    :root {
-      --primary-color: #1e3a8a;
-      --accent-color: #10b981;
-      --text-color: #1f2937;
-      --background-color: #ffffff;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    h1, h2 {
-      font-family: 'Poppins', sans-serif;
-      color: var(--primary-color);
-    }
-
-    nav {
-      margin-bottom: 2rem;
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 0.5rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      padding-left: 0;
-    }
-
-    nav a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.25rem 0.5rem;
-    }
-
-    nav a:hover,
-    nav a:focus,
-    nav a.active {
-      background-color: var(--accent-color);
-      color: white;
-      border-radius: 4px;
-      outline: none;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    ul {
-      list-style-type: disc;
-      margin-left: 1.5rem;
-    }
-
-    ul li::marker {
-      color: var(--accent-color);
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: var(--primary-color);
-      color: white;
-      text-decoration: none;
-      padding: 0.75rem 1.25rem;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover,
-    .cta-button:focus {
-      background-color: #144a75;
-      outline: none;
-    }
-
-    footer {
-      border-top: 2px solid var(--accent-color);
-      margin-top: 3rem;
-      padding-top: 1rem;
-      font-size: 0.9rem;
-      color: var(--primary-color);
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
   <nav aria-label="Primary navigation">
@@ -116,12 +35,13 @@
     </ul>
   </nav>
 
-  <main>
+  <main role="main">
     <h1>Our Services</h1>
 
     <section>
       <h2>Website Design</h2>
       <p>Custom, responsive website design tailored to your brand and business goals.</p>
+      <img src="images/images1.webp" alt="Web development illustration" width="800" height="400" style="max-width:100%;height:auto;aspect-ratio:2/1;" loading="lazy" />
     </section>
 
     <section>
@@ -139,6 +59,27 @@
       <p>Contact us today for a personalized quote and to discuss how we can support your project.</p>
       <a href="contact.html" class="cta-button" role="button">Get a Quote</a>
     </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <form action="thankyou.html" method="get" id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <section id="services">
+      <h2>Service Highlights</h2>
+      <div id="services-list" class="grid"></div>
+    </section>
   </main>
 
   <footer>
@@ -150,5 +91,16 @@
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
   </script>
+  <script src="scripts/final.js" defer></script>
+  <div id="service-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-content">
+    <button class="close-button" aria-label="Close modal">&times;</button>
+    <h3 id="modal-title"></h3>
+    <p id="modal-description"></p>
+    <p><strong>Price:</strong> <span id="modal-price"></span></p>
+    <p><strong>Duration:</strong> <span id="modal-duration"></span></p>
+  </div>
+</div>
+
 </body>
 </html>
