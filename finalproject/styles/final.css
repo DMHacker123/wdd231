@@ -180,3 +180,10 @@ footer {
     gap: 1rem;
   }
 }
+
+.responsive-banner {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+}
+

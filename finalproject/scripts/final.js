@@ -1,10 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-  loadServices();
-});
-
 const LOCAL_STORAGE_KEY = "servicesData";
 const CACHE_EXPIRATION_MS = 1000 * 60 * 60 * 24; // 24 hours
 let lastFocusedElement = null;
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadServices();
+
+  // Footer info
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent = document.lastModified;
+
+  // Modal close setup
+  document.querySelector(".close-button").addEventListener("click", closeModal);
+  document.getElementById("service-modal").addEventListener("click", e => {
+    if (e.target === e.currentTarget) closeModal();
+  });
+});
 
 async function loadServices() {
   try {
@@ -141,9 +151,3 @@ function trapTabKey(e) {
 function handleEscKey(e) {
   if (e.key === 'Escape') closeModal();
 }
-
-// One-time modal setup
-document.querySelector('.close-button').addEventListener('click', closeModal);
-document.getElementById('service-modal').addEventListener('click', e => {
-  if (e.target === e.currentTarget) closeModal();
-});
