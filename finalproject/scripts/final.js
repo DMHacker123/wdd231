@@ -3,16 +3,40 @@ const CACHE_EXPIRATION_MS = 1000 * 60 * 60 * 24; // 24 hours
 let lastFocusedElement = null;
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadServices();
+  const servicesContainer = document.getElementById("services-list");
+  if (servicesContainer) {
+    loadServices();
+  }
 
-  // Footer info
   document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById("lastModified").textContent = document.lastModified;
 
-  // Modal close setup
-  document.querySelector(".close-button").addEventListener("click", closeModal);
-  document.getElementById("service-modal").addEventListener("click", e => {
-    if (e.target === e.currentTarget) closeModal();
+  const closeBtn = document.querySelector(".close-button");
+  const modal = document.getElementById("service-modal");
+  if (closeBtn && modal) {
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+      if (e.target === e.currentTarget) closeModal();
+    });
+  }
+
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector("nav ul");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", !isExpanded);
+      navLinks.classList.toggle("open");
+    });
+  }
+
+  const currentPage = location.pathname.split("/").pop();
+  document.querySelectorAll("nav a").forEach(link => {
+    const linkPage = link.getAttribute("href");
+    if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page");
+    }
   });
 });
 
@@ -151,3 +175,15 @@ function trapTabKey(e) {
 function handleEscKey(e) {
   if (e.key === 'Escape') closeModal();
 }
+
+// Highlight the active nav link
+const currentPage = location.pathname.split("/").pop(); // e.g., 'contact.html'
+
+document.querySelectorAll("nav a").forEach(link => {
+  const linkPage = link.getAttribute("href");
+
+  if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+    link.classList.add("active");
+    link.setAttribute("aria-current", "page");
+  }
+});

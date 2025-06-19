@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,67 +8,56 @@
   <meta name="author" content="Darwin Matos" />
   <meta name="description" content="Explore professional web development services tailored for small businesses and startups. Discover our work and start your digital journey today." />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
 
+  <!-- Open Graph -->
   <meta property="og:url" content="https://dmhacker123.github.io/wdd231/finalproject/index.html" />
   <meta property="og:title" content="Web Development Home | Professional Website Design & Maintenance" />
-  <meta property="og:image" content="https://github.com/DMHacker123/wdd231/blob/main/finalproject/images/image1.png?raw=true" />
+  <meta property="og:image" content="https://dmhacker123.github.io/wdd231/finalproject/images/image1.png" />
 
-  <!-- Twitter Card Support -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Home | Web Development Services" />
   <meta name="twitter:description" content="Explore professional web development services tailored for small businesses and startups." />
-  <meta name="twitter:image" content="https://github.com/DMHacker123/wdd231/blob/main/finalproject/images/image1.png?raw=true" />
+  <meta name="twitter:image" content="https://dmhacker123.github.io/wdd231/finalproject/images/image1.png" />
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-
   <link rel="stylesheet" href="styles/final.css">
 </head>
 <body>
 <header>
-  <nav aria-label="Primary navigation">
+  <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
+  <nav id="primary-nav" aria-label="Primary navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active" aria-current="page">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
+      <li><a href="form.html">Contact</a></li>
     </ul>
   </nav>
 </header>
-
-
-  <main>
-    <h1>Welcome to Web Development Services</h1>
-
-    <section>
-      <h2>Our Services Overview</h2>
-      <p>Your partner for modern, responsive, and accessible websites.</p>
-      <img src="images/images.webp" alt="Web development illustration" width="800" height="400" style="max-width:100%;height:auto;aspect-ratio:2/1;" loading="lazy" />
-
-      <p>We offer professional website design, development, and maintenance services tailored to your business needs.</p>
-    </section>
-
-    <section>
-      <h2>Recent Work & Testimonials</h2>
-      <blockquote>
-        "They built our site quickly and efficiently. The team was very responsive and the result exceeded our expectations." – Jane Doe, Startup Founder
-      </blockquote>
-      <blockquote>
-        "Our new website is sleek, fast, and mobile-friendly thanks to their expert services." – John Smith, Small Business Owner
-      </blockquote>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; Web Development Services <span id="year"></span></p>
-    <p>Last Modified: <span id="lastModified"></span></p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
+<main>
+  <h1>Welcome to Web Development Services</h1>
+  <section>
+    <h2>Our Services Overview</h2>
+    <p>Your partner for modern, responsive, and accessible websites.</p>
+    <img src="images/images.webp" alt="Web development illustration" width="800" height="400" class="responsive-banner" loading="lazy" />
+    <p>We offer professional website design, development, and maintenance services tailored to your business needs.</p>
+  </section>
+  <section>
+    <h2>Recent Work & Testimonials</h2>
+    <blockquote>
+      "They built our site quickly and efficiently. The team was very responsive and the result exceeded our expectations." – Jane Doe, Startup Founder
+    </blockquote>
+    <blockquote>
+      "Our new website is sleek, fast, and mobile-friendly thanks to their expert services." – John Smith, Small Business Owner
+    </blockquote>
+  </section>
+</main>
+<footer>
+  <p>&copy; Web Development Services <span id="year"></span></p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+<script src="scripts/final.js" defer></script>
 </body>
 </html>

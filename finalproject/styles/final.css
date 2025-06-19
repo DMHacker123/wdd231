@@ -47,6 +47,11 @@ nav a.active {
   border-radius: 4px;
 }
 
+nav a.active {
+  font-weight: bold;
+  border-bottom: 2px solid currentColor;
+}
+
 nav a:focus {
   outline: 2px dashed var(--accent-color);
   outline-offset: 4px;
@@ -110,12 +115,16 @@ footer {
 }
 
 #services-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  padding: 1rem 0;
 }
 
 .service-card {
+  flex: 1 1 280px;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
@@ -165,7 +174,6 @@ footer {
   cursor: pointer;
 }
 
-/* Responsive Enhancements */
 @media (max-width: 500px) {
   body {
     padding: 1rem;
@@ -185,5 +193,56 @@ footer {
   max-width: 100%;
   height: auto;
   aspect-ratio: 2 / 1;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  padding: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    display: none;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space between each label/input pair */
+  max-width: 400px; /* optional, control form width */
+}
+
+#contact-form label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: vertical; /* only textarea resizable vertically */
 }
 

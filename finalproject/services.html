@@ -1,102 +1,75 @@
+<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Website Design & Maintenance Services | Web Development Services</title>
-
   <meta name="description" content="Browse our web design, maintenance, and SEO services. Transparent pricing and solutions for growing your business online." />
   <meta name="author" content="Darwin Matos" />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
-
-  <!-- Open Graph -->
-  <meta property="og:url" content="https://dmhacker123.github.io/wdd231/finalproject/index.html" />
+  <meta property="og:url" content="https://dmhacker123.github.io/wdd231/finalproject/services.html" />
   <meta property="og:title" content="Web Development Services | Professional Website Design & Maintenance" />
-  <meta property="og:image" content="https://github.com/DMHacker123/wdd231/blob/main/finalproject/images/image1.png?raw=true" />
-
-  <!-- Twitter Card Support -->
+  <meta property="og:image" content="https://dmhacker123.github.io/wdd231/finalproject/images/image1.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Home | Web Development Services" />
+  <meta name="twitter:title" content="Services | Web Development Services" />
   <meta name="twitter:description" content="Explore professional web development services tailored for small businesses and startups." />
-  <meta name="twitter:image" content="https://github.com/DMHacker123/wdd231/blob/main/finalproject/images/image1.png?raw=true" />
+  <meta name="twitter:image" content="https://dmhacker123.github.io/wdd231/finalproject/images/image1.png" />
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/final.css">
-
 </head>
 <body>
 <header>
-  <nav aria-label="Primary navigation">
+  <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
+  <nav id="primary-nav" aria-label="Primary navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active" aria-current="page">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
+      <li><a href="form.html">Contact</a></li>
+
     </ul>
   </nav>
 </header>
+<main role="main">
+  <h1>Our Services</h1>
 
+  <section>
+    <h2>Website Design</h2>
+    <p>Custom, responsive website design tailored to your brand and business goals.</p>
+    <img src="images/images1.webp" alt="Web development illustration" width="800" height="400" class="responsive-banner" loading="lazy" />
+  </section>
 
-  <main role="main">
-    <h1>Our Services</h1>
+  <section>
+    <h2>Maintenance & Support</h2>
+    <p>Reliable website maintenance services including updates, backups, and troubleshooting.</p>
+  </section>
 
-    <section>
-      <h2>Website Design</h2>
-      <p>Custom, responsive website design tailored to your brand and business goals.</p>
-      <img src="images/images1.webp" alt="Web development illustration" width="800" height="400" style="max-width:100%;height:auto;aspect-ratio:2/1;" loading="lazy" />
-    </section>
+  <section>
+    <h2>Search Engine Optimization (SEO)</h2>
+    <p>Improve your website’s visibility and ranking on search engines through proven SEO strategies.</p>
+  </section>
 
-    <section>
-      <h2>Maintenance & Support</h2>
-      <p>Reliable website maintenance services including updates, backups, and troubleshooting.</p>
-    </section>
+  <section>
+    <h2>Pricing & Contact</h2>
+    <p>Contact us today for a personalized quote and to discuss how we can support your project.</p>
+    <a href="contact.html" class="cta-button" role="button">Get a Quote</a>
+  </section>
 
-    <section>
-      <h2>Search Engine Optimization (SEO)</h2>
-      <p>Improve your website’s visibility and ranking on search engines through proven SEO strategies.</p>
-    </section>
+  <section id="services">
+    <h2>Service Highlights</h2>
+    <div id="services-list" class="grid"></div>
+  </section>
+</main>
 
-    <section>
-      <h2>Pricing & Contact</h2>
-      <p>Contact us today for a personalized quote and to discuss how we can support your project.</p>
-      <a href="contact.html" class="cta-button" role="button">Get a Quote</a>
-    </section>
+<footer>
+  <p>&copy; Web Development Services <span id="year"></span></p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
 
-    <section>
-      <h2>Contact Us</h2>
-      <form action="thankyou.html" method="get" id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-
-    <section id="services">
-      <h2>Service Highlights</h2>
-      <div id="services-list" class="grid"></div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; Web Development Services <span id="year"></span></p>
-    <p>Last Modified: <span id="lastModified"></span></p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
-  <script src="scripts/final.js" defer></script>
-  <div id="service-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+<div id="service-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-content">
     <button class="close-button" aria-label="Close modal">&times;</button>
     <h3 id="modal-title"></h3>
@@ -106,5 +79,6 @@
   </div>
 </div>
 
+<script src="scripts/final.js" defer></script>
 </body>
 </html>
